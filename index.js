@@ -1,26 +1,17 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import Hello from './Hello';
-import './style.css';
+import HeaderApp from './components/header-app';
+import SearchPanel from './components/search-panel';
+import TodoList from './components/todo-list';
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      name: 'React'
-    };
-  }
-
-  render() {
-    return (
-      <div>
-        <Hello name={this.state.name} />
-        <p>
-          Start editing to see some magic happen :)
-        </p>
-      </div>
-    );
-  }
-}
+const App = () => {
+  return (
+    <div>
+      <HeaderApp />
+      <SearchPanel />
+      <TodoList />
+    </div>
+  )
+};
 
 render(<App />, document.getElementById('root'));
